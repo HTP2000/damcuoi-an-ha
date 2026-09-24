@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới - Hạnh Phúc Trăm Năm</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio Player (Ẩn) -->
+    <audio id="bg-music" loop preload="auto"></audio>
+    <button id="music-toggle" class="music-btn">🎵 Bật nhạc</button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <h1>Chú Rể & Cô Dâu</h1>
+            <p>Trân trọng kính mời bạn đến dự lễ thành hôn</p>
+            <div class="date">Ngày 20 tháng 10 năm 2026</div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Load từ Sanity) -->
+    <section class="gallery-section">
+        <h2 data-aos="fade-up">Album Kỷ Niệm</h2>
+        <div class="gallery-grid" id="gallery-container">
+            <!-- Ảnh sẽ được load bằng Javascript vào đây -->
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" data-aos="zoom-in">
+        <h2>Địa Điểm Tổ Chức</h2>
+        <p>Nhà hàng Tiệc Cưới Hạnh Phúc, Số 1, Đường Tình Yêu, Hà Nội</p>
+        <!-- Nút này mở Google Maps App trên điện thoại -->
+        <a href="https://www.google.com/maps/dir/?api=1&destination=21.028511,105.804817" target="_blank" class="btn-map">📍 Chỉ đường trên Google Maps</a>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section" data-aos="fade-up">
+        <h2>Xác Nhận Tham Dự</h2>
+        <p>Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng tôi.</p>
+        
+        <form id="rsvp-form">
+            <div class="form-group">
+                <input type="text" name="Họ Tên" placeholder="Họ và tên của bạn" required>
+            </div>
+            <div class="form-group">
+                <select name="Mối Quan Hệ" required>
+                    <option value="" disabled selected>Bạn là khách của...</option>
+                    <option value="Khách Cô Dâu">Gia đình Cô Dâu</option>
+                    <option value="Khách Chú Rể">Gia đình Chú Rể</option>
+                    <option value="Bạn chung">Bạn chung</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="Tham Gia" required>
+                    <option value="" disabled selected>Bạn sẽ đến chứ?</option>
+                    <option value="Có">Chắc chắn có mặt!</option>
+                    <option value="Không">Rất tiếc không thể tham gia</option>
+                </select>
+            </div>
+            <button type="submit" id="submit-btn">Gửi Xác Nhận</button>
+        </form>
+        <p id="form-message" style="display: none; color: green; margin-top: 15px;">Cảm ơn bạn đã xác nhận!</p>
+    </section>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
